@@ -1,17 +1,15 @@
 import { Component } from '@angular/core';
-import { Connection } from './connection';
 import { AuthService } from './authentication.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['../assets/css/materialize.css', '../assets/css/main.css'],
   providers: [AuthService]
 })
 export class AppComponent {
-  login = '';
+  email = '';
   pass = '';
-  log: Connection ;
   constructor(private authService: AuthService) { }
 }
 
