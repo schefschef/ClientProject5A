@@ -31,11 +31,19 @@ h2{
          -o-transform: rotate(-90deg);
             transform: rotate(-90deg);
 }
-.register{ 	
+.register{ 
+	width:100%;
  	margin-top: 17vh;
  	margin-left:7vw;
 }
+	.register a{
+		width:10%;
+	}
 .login{
+	width:100%;
  	margin-top: 48vh;
  	margin-left:7vw;
 }
+.login a{
+		width:10%;
+	}
