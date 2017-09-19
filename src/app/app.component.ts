@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Connection } from './connection';
 import { AuthService } from './authentication.service';
 
 @Component({
@@ -10,10 +11,9 @@ import { AuthService } from './authentication.service';
 export class AppComponent {
   login = '';
   pass = '';
-  connected = '';
-
-  constructor(private authService: AuthService) {
-  }
+  log: Connection ;
+  constructor(private authService: AuthService) { }
+}
 
   onConnect(): any {
     this.connected = this.login ;
