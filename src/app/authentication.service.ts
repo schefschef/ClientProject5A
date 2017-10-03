@@ -11,9 +11,13 @@ export class AuthService {
     phrase: 'Je me kiffe',
   };
 
-  auth(login: string, pass: string): any {
+  connection(login: string, pass: string): any {
     if ( login === this.auxane.email  &&  pass  === this.auxane.password ) {
-     return 1;
+      return 1;
     }
+  }
+
+  register(username: string, email: string, pass: string): any {
+     return 1;
   }
 }

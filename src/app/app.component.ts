@@ -8,6 +8,7 @@ import { AuthService } from './authentication.service';
   providers: [AuthService]
 })
 export class AppComponent {
+  username = ''
   email = '';
   pass = '';
   token = 0;
@@ -19,7 +20,11 @@ export class AppComponent {
     this.page = choice;
   }
   connection() {
-    this.token = this.authService.auth(this.email, this.pass);
+    this.token = this.authService.connection(this.email, this.pass);
+  }
+
+  register() {
+    this.token = this.authService.register(this.username, this.email, this.pass);
   }
 }
 

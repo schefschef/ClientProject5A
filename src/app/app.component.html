@@ -28,21 +28,21 @@
      <div class="container" *ngIf="page==='register'">
         <div class="row">
         <div class="input-field col s12">
-            <input id="pseudo" type="email" class="validate" placeholder="Username">
+            <input id="pseudo" type="email" class="validate" placeholder="Username" [(ngModel)]="username">
           </div>
 
         </div>
         <div class="row">
           <div class="input-field col s6">
-            <input id="email" type="email" class="validate" placeholder="Email">
+            <input id="email" type="email" class="validate" placeholder="Email" [(ngModel)]="email">
           </div>
 
           <div class="input-field col s6">
-            <input id="password" type="password" class="validate" placeholder="Password">
+            <input id="password" type="password" class="validate" placeholder="Password" [(ngModel)]="pass">
 
           </div>
         </div>
-          <a class="waves-effect waves-light btn" style="background-color: #ebb81e">Register</a>
+          <a class="waves-effect waves-light btn" style="background-color: #ebb81e"(click)="register()">Register</a>
       </div>
     </div>
 </div>
