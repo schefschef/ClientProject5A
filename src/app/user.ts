@@ -4,12 +4,15 @@ export class User {
   pseudo: string;
   picture: string;
   phrase: string;
-  contacts: Contact[];
 }
+/*
+  contacts: Contact[];
+
 export class Contact {
   //email: string;
   pseudo: string;
   //picture: string;
   //phrase: string;
 }
+*/
 

@@ -10,7 +10,17 @@ import { AuthService } from './authentication.service';
 export class AppComponent {
   email = '';
   pass = '';
+  token = 0;
+  page = 'login';
+
   constructor(private authService: AuthService) { }
+
+  changePage(choice: string) {
+    this.page = choice;
+  }
+  connection() {
+    this.token = this.authService.auth(this.email, this.pass);
+  }
 }
 
 

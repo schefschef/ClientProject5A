@@ -1,11 +1,18 @@
 import { Injectable } from '@angular/core';
-import { Connection } from './connection';
+import { User } from './user';
 
 @Injectable()
 export class AuthService {
-  user: Connection;
-  Auth(login: string, pass: string): any {
-    if (this.user.auxane.email === login && this.user.auxane.password === pass) {
+  auxane: User = {
+    email: 'auxane',
+    password: '1234',
+    pseudo: '4ux4ne',
+    picture: '../assets/profilpic.jpg',
+    phrase: 'Je me kiffe',
+  };
+
+  auth(login: string, pass: string): any {
+    if ( login === this.auxane.email  &&  pass  === this.auxane.password ) {
      return 1;
     }
   }
